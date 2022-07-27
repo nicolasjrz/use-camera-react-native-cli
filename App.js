@@ -7,7 +7,7 @@ const App = () => {
 
   const selectImage = () => {
     const options = {
-      title: 'selectiona una imagen',
+      title: 'select an image',
       storageOptions: {skipBackup: true, path: 'images'},
     };
 
@@ -15,7 +15,7 @@ const App = () => {
       if (response.errorCode) {
         console.log(response.errorMessage);
       } else if (response.didCancel) {
-        console.log('el usuario cancelo');
+        console.log('the user canceled');
       } else {
         const path = response.assets[0].uri;
         setImagen(path);
@@ -25,7 +25,7 @@ const App = () => {
 
   const takePicture = () => {
     const options = {
-      title: 'toma una imagen',
+      title: 'take a picture',
       storageOptions: {skipBackup: true, path: 'images'},
       includeBase64: true,
     };
@@ -34,7 +34,7 @@ const App = () => {
       if (response.errorCode) {
         console.log(response.errorMessage);
       } else if (response.didCancel) {
-        console.log('el usuario cancelo');
+        console.log('the user canceled');
       } else {
         const path = response.assets[0].uri;
         setImagen(path);
